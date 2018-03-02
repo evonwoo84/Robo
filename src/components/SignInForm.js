@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import LogoGoogle from '../images/icon_google.png';
+import LogoFacebook from '../images/icon_facebook.png';
 import {
   Image,
   Platform,
@@ -24,6 +26,7 @@ export default class SignInForm extends Component<{}> {
             secureTextEntry={true}
             placeholder="Password"/>
 
+        <View style={styles.containerSub}>
             <TouchableOpacity
               style={styles.button}
               onPress={this._onPressButton}>
@@ -33,14 +36,23 @@ export default class SignInForm extends Component<{}> {
             <TouchableOpacity
               style={styles.button}
               onPress={this._onPressButton}>
-                <Text style={styles.buttonText}>Sign In with Google</Text>
+                <Text style={styles.buttonText}>
+                  Sign In with <Image
+                    style={styles.logo}
+                    source={ require('../images/icon_google.png') } />
+                </Text>
             </TouchableOpacity>
 
             <TouchableOpacity
               style={styles.button}
               onPress={this._onPressButton}>
-                <Text style={styles.buttonText}>Sign In with Facebook</Text>
+                <Text style={styles.buttonText}>
+                  Sign In with <Image
+                    style={styles.logo}
+                    source={ require('../images/icon_facebook.png') } />
+                </Text>
             </TouchableOpacity>
+          </View>
 
       </View>
     )
@@ -50,17 +62,26 @@ export default class SignInForm extends Component<{}> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    backgroundColor: '#E0E0E0',
+  },
+  containerSub: {
+    flex: 2,
+    backgroundColor: '#E0E0E0',
+    marginVertical: 25,
+  },
+  logo: {
+    height: 50,
+    width: 50,
   },
   inputBox: {
     backgroundColor: '#F5FCFF',
-    borderRadius: 25,
+    marginVertical: 5,
     width: 300,
   },
   button: {
-    backgroundColor: '#afdde9',
+    backgroundColor: '#757575',
     borderRadius: 5,
     marginVertical: 5,
     paddingVertical: 10,
@@ -68,6 +89,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     textAlign: 'center',
+    color: '#FFF',
     fontSize: 18,
     fontWeight: '500',
   },

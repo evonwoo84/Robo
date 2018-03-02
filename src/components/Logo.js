@@ -17,7 +17,7 @@ export default class Logo extends Component<{}> {
           style={styles.welcomeLogo}
           source={ require('../images/icon_roboapp.png') } />
 
-          <Text style={styles.welcomeLogoText}>RoboApp</Text>
+          <Text style={styles.welcomeLogoText}>Robo</Text>
 
       </View>
     )
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#E0E0E0',
   },
   welcomeLogo: {
     height: 120,

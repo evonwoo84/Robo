@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#e0e0e0',
   },
   statusBar: {
     backgroundColor: '#F5FCFF',
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
   welcome: {
     fontSize: 20,
     textAlign: 'center',
-    margin: 10,
+    margin: 5,
   },
   instructions: {
     textAlign: 'center',
