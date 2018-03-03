@@ -15,23 +15,23 @@ import {
 import Logo from '../components/Logo';
 import Form from '../components/Form';
 
-export default class SignIn extends Component<{}> {
+export default class SignUp extends Component<{}> {
 
-  signup() {
-    Actions.signup()
+  signin() {
+    Actions.signin()
   }
 
   render() {
     return(
       <View style={styles.container}>
         <Logo />
-        <Form type="SignIn"/>
+        <Form type="SignUp"/>
         <View style={styles.footer}>
-          <Text>Dont have account yet ? </Text>
+          <Text>Robo is cool</Text>
           <TouchableOpacity
             style={styles.button}
-            onPress={this.signup}>
-              <Text style={styles.link}>Sign Up now</Text>
+            onPress={this.signin}>
+              <Text style={styles.link}>Sign In</Text>
           </TouchableOpacity>
         </View>
       </View>

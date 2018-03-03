@@ -1,27 +1,17 @@
 import React, { Component } from 'react';
 import {
-  Image,
   Platform,
   StatusBar,
   StyleSheet,
   Text,
   View
 } from 'react-native';
-
-import SignIn from './src/pages/SignIn';
-
+import Routes from './src/Routes';
 
 export default class App extends Component<{}> {
   render() {
     return (
-      <View style={styles.container}>
-
-      	<StatusBar
-      	  style={styles.statusBar} />
-
-        <SignIn />
-
-      </View>
+      <Routes/>
     );
   }
 }
@@ -32,7 +22,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#e0e0e0',
+    backgroundColor: '#E0E0E0',
   },
   statusBar: {
     backgroundColor: '#F5FCFF',

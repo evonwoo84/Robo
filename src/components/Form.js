@@ -12,32 +12,34 @@ import {
   View
 } from 'react-native';
 
-export default class SignInForm extends Component<{}> {
+export default class Form extends Component<{}> {
   render() {
     return(
       <View style={styles.container}>
 
         <TextInput
           style={styles.inputBox}
+          underlineColorAndroid='rgba( 0, 0, 0, 0)'
           placeholder="Username or Email"/>
 
           <TextInput
             style={styles.inputBox}
+            underlineColorAndroid='rgba( 0, 0, 0, 0)'
             secureTextEntry={true}
             placeholder="Password"/>
 
-        <View style={styles.containerSub}>
+
             <TouchableOpacity
               style={styles.button}
               onPress={this._onPressButton}>
-                <Text style={styles.buttonText}>Sign In</Text>
+                <Text style={styles.buttonText}>{this.props.type}</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
               style={styles.button}
               onPress={this._onPressButton}>
                 <Text style={styles.buttonText}>
-                  Sign In with <Image
+                  {this.props.type} with <Image
                     style={styles.logo}
                     source={ require('../images/icon_google.png') } />
                 </Text>
@@ -47,12 +49,12 @@ export default class SignInForm extends Component<{}> {
               style={styles.button}
               onPress={this._onPressButton}>
                 <Text style={styles.buttonText}>
-                  Sign In with <Image
+                  {this.props.type} with <Image
                     style={styles.logo}
                     source={ require('../images/icon_facebook.png') } />
                 </Text>
             </TouchableOpacity>
-          </View>
+
 
       </View>
     )
@@ -61,15 +63,9 @@ export default class SignInForm extends Component<{}> {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'space-between',
+    flexGrow: 1,
+    justifyContent: 'flex-end',
     backgroundColor: '#E0E0E0',
-  },
-  containerSub: {
-    flex: 2,
-    backgroundColor: '#E0E0E0',
-    marginVertical: 25,
   },
   logo: {
     height: 50,
@@ -77,6 +73,7 @@ const styles = StyleSheet.create({
   },
   inputBox: {
     backgroundColor: '#F5FCFF',
+    borderRadius: 5,
     marginVertical: 5,
     width: 300,
   },
